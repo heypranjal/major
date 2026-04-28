@@ -169,6 +169,18 @@
   gap: 2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .features-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .stat-card {
   background-color: white;
   border-radius: 12px;

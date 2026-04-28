@@ -244,6 +244,28 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 1024px) {
+  .mission-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .mission-content {
+    padding: 2rem;
+  }
+
+  .team-section {
+    padding: 1.5rem;
+  }
+
+  .mentor-card {
+    padding: 2rem;
+  }
+
+  .tech-stack {
+    padding: 2.5rem 1.5rem 3.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;
@@ -264,5 +286,19 @@
 
   .section-title {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .mission-content {
+    padding: 1.5rem;
+  }
+
+  .mentor-card {
+    padding: 1.5rem;
   }
 }
