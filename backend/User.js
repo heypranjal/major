@@ -1,2 +1,0 @@
-import registeringUser from "./Schema";
-

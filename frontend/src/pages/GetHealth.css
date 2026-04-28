@@ -26,6 +26,37 @@
   margin: 0 auto;
 }
 
+.patient-location {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.patient-location label {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.patient-location input {
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.patient-location input:focus {
+  outline: none;
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
 .upload-card {
   background-color: white;
   border-radius: 12px;
@@ -87,6 +118,22 @@
 
 .file-preview {
   padding: 2rem;
+}
+
+.image-preview {
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(220, 53, 69, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.image-preview img {
+  width: 100%;
+  display: block;
+  max-height: 360px;
+  object-fit: cover;
 }
 
 .preview-header {
@@ -230,6 +277,35 @@
 
 .analysing-section p {
   color: #6c757d;
+}
+
+.scan-progress {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(220, 53, 69, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f8c6cb, #dc3545, #c82333);
+  border-radius: 999px;
+  transition: width 0.2s ease;
 }
 
 .results-section {
