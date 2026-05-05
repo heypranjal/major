@@ -1,12 +1,93 @@
-# React + Vite
+# TB Detect AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-based tuberculosis (TB) detection system that estimates TB risk using two inputs:
 
-Currently, two official plugins are available:
+- Place-of-living demographics (location and household context).
+- Lung opacity metrics from medical imaging.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This frontend provides the user interface for collecting inputs and presenting the model output, backed by a production-ready AI model.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Guided input flow for demographic and imaging-derived opacity data.
+- Risk score output with a clear summary and next-step guidance.
+- Responsive UI for desktop and mobile.
+
+## Tech Stack
+
+- React
+- Vite
+- CSS
+- Python (model and inference service)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### Install
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+frontend/
+	public/
+	src/
+		components/
+		pages/
+		App.jsx
+		main.jsx
+```
+
+## How It Works (High Level)
+
+1. User provides location-based demographic inputs.
+2. User provides a lung opacity score derived from imaging analysis.
+3. The backend model calculates TB risk and returns the result.
+4. The UI renders the prediction and guidance.
+
+## Model Integration
+
+The system includes a backend endpoint that accepts demographic details and opacity metrics and returns a risk score.
+
+Example response shape:
+
+```json
+{
+	"riskScore": 0.72,
+	"riskLevel": "high",
+	"message": "High likelihood of TB. Please consult a clinician."
+}
+```
+
+## Disclaimer
+
+This software is for educational and research purposes only. It is not a medical device and should not be used as a substitute for professional diagnosis or treatment.
+
+## License
+
+Specify the license for this project here.
